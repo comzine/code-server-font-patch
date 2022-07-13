@@ -16,10 +16,10 @@ fi
 
 if ! grep -q "/* ::CUSTOM VSCODE FONTS:: */" "$WORKBENCH_CSS_PATH"; then
   # Copy fonts to $WORKBENCH_PATH
-  cp -rn /code-server-font-patch/resources/fonts "$WORKBENCH_PATH/"
+  cp -rn ./resources/fonts "$WORKBENCH_PATH/"
 
   # Prepend fonts.css to workbench.web.api.css
-  cat /code-server-font-patch/resources/fonts.css >> $WORKBENCH_CSS_PATH
+  cat ./resources/fonts.css >> $WORKBENCH_CSS_PATH
 fi
 
 echo "Done! Have fun!"
